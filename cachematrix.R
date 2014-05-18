@@ -1,5 +1,24 @@
+##################################################
+##
 ## makeCacheMatrix() and cacheSolve()
 ## - pair of functions that cache the inverse of a matrix
+## - v1.0, 2014-05-17
+##
+## <<- operator assigns a value to an object in an environment  different from the current environment
+##
+## makeCacheMatrix
+## - creates a special "vector", consisting of a list containing functions to
+##  - set the value of the matrix
+##  - get the value of the matrix
+##  - set the value of the inverse
+##  - get the value of the inverse
+##
+## cacheSolve
+## - calculates the inverse of the special "vector" created with makeCacheMatrix
+## - first checks to see if the inverse has already been calculated
+## - if so, it gets the inverse from the cache and skips the computation
+## - otherwise, it calculates the inverse of the data and caches it via the setInverse function
+##
 
 ##########
 ## makeCacheMatrix
